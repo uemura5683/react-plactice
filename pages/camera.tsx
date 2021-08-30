@@ -61,7 +61,13 @@ export default function App() {
       )}
       <div className="btn-form grid">
         <Link href="/">back</Link>
-        <a href="https://dev.classmethod.jp/articles/get-image-with-react-webcam-and-typescript/" target="_blank" rel="noreferrer noopener"> reference </a>
+        <a
+          href="https://dev.classmethod.jp/articles/get-image-with-react-webcam-and-typescript/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          reference
+        </a>
       </div>
     </>
   );

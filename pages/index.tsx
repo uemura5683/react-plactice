@@ -18,6 +18,9 @@ export default function Home() {
         <p className={styles.description}>
           <Link href="/camera">Camera</Link>
         </p>
+        <p className={styles.description}>
+          <Link href="/modal">Modal</Link>
+        </p>
       </main>
     </div>
   )
