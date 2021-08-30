@@ -19,7 +19,7 @@
     "react-hooks-use-modal": "^2.0.2",
     "react-three-fiber": "3.0.0-beta.13",
     "react-webcam": "^6.0.0",
-    "three": "^0.132.2",
+    "three": "0.125.0",
     "typescript": "^4.3.5"
   },
   "devDependencies": {
