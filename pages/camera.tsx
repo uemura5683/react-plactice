@@ -66,7 +66,7 @@ export default function App() {
           target="_blank"
           rel="noreferrer noopener"
         >
-          reference
+          　参考記事
         </a>
       </div>
     </>
