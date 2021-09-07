@@ -1,7 +1,8 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { useModal } from 'react-hooks-use-modal';
-import styles from '../styles/Home.module.css'
+import Link from "next/link"
+import styles from '../styles/css/Modal.module.css'
 
 const modalStyle: React.CSSProperties = {
   backgroundColor: '#fff',
@@ -9,22 +10,34 @@ const modalStyle: React.CSSProperties = {
   borderRadius: '10px',
 };
 
-export default function App() {
+export default function Modal() {
   const [Modal, open, close, isOpen] = useModal('root', {
     preventScroll: true,
   });
   return (
-    <div>
+    <div className={styles.container}>
       <p>Modal is Open? {isOpen ? 'Yes' : 'No'}</p>
-      <button onClick={open}>OPEN</button>
+      <button
+        className="btn btn-primary"
+        onClick={open}>
+        OPEN
+      </button>
       { isOpen ? (
-        <div className="modal">
+        <div className={styles.modal}>
           <h1>Title</h1>
           <p>This is a customizable modal.</p>
-          <button onClick={close}>CLOSE</button>
+          <button
+            className="btn btn-secondary"
+            onClick={close}
+          >
+            CLOSE
+          </button>
        </div>
       ) : null
       }
+      <div className="btn-form grid">
+        <Link href="/">back</Link>
+      </div>
     </div>
   );
 };
