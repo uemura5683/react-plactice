@@ -1,3 +1,9 @@
 残タスク
 sitemap.xml　を作成
 https://ru-blog.com/nextjs-microcms-sitemap/
+
+
+/**
+* useRefをTypeScriptで使うと Object is possibly 'null'. と怒られる件の対策
+**/
+https://qiita.com/akifumiyoshimu/items/539e4af7ed4d068c0144
