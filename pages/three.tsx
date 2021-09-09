@@ -1,14 +1,16 @@
-import { useRef } from 'react';
+import React, { useRef } from 'react';
 import { Canvas, useFrame } from 'react-three-fiber';
 import Link from "next/link"
 
 const Thing = () => {
-    const ref = useRef();
+    const ref = useRef(null);
+
     useFrame(() => (
-                      ref.current.rotation.x += 0.01,
-                      ref.current.rotation.y += 0.01,
-                      ref.current.rotation.z += 0.01
-                   ));
+      ref.current.rotation.x += 0.01,
+      ref.current.rotation.y += 0.01,
+      ref.current.rotation.z += 0.01
+    ));
+
     return (
         <mesh
             ref={ref}
