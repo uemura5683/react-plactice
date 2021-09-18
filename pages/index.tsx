@@ -26,6 +26,9 @@ export default function Home() {
           <p className={styles.description}>
             <Link href="/three">three</Link>
           </p>
+          <p className={styles.description}>
+            <Link href="/contact">contact</Link>
+          </p>
         </div>
       </main>
     </div>
