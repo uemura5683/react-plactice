@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import styles from '../styles/css/Home.module.css'
+import styles from '../styles/css/ReactHook.module.css'
 
 export default function Home() {
   return (
@@ -14,23 +14,19 @@ export default function Home() {
       <img src="/img/logo.png"/>
       <main className={styles.main}>
         <h1 className={styles.title}>
-          React Plactice!
+          React hook
         </h1>
         <div className="flex">
           <p className={styles.description}>
-            <Link href="/camera">Camera</Link>
+            <Link href="/hook/usestate">useState</Link>
           </p>
           <p className={styles.description}>
-            <Link href="/modal">Modal</Link>
+            <Link href="/hook/useeffect">useEffect</Link>
           </p>
+        </div>
+        <div className="flex">
           <p className={styles.description}>
-            <Link href="/three">three</Link>
-          </p>
-          <p className={styles.description}>
-            <Link href="/contact">contact</Link>
-          </p>
-          <p className={styles.description}>
-            <Link href="/reacthook">reacthook</Link>
+            <Link href="/">TOP</Link>
           </p>
         </div>
       </main>

@@ -1,8 +1,8 @@
 import axios from "axios";
-import React, { useRef, useState, useCallback } from "react";
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import ReactDOM from "react-dom";
 import { useRouter } from "next/router";
-import Link from "next/link"
 import styles from '../styles/css/Contact.module.css'
 
 const Contacts = () => {
@@ -124,7 +124,9 @@ const Contacts = () => {
     }
   }
 
-  const FormSubmit = e => {
+  const FormSubmit = async e => {
+    e.preventDefault();
+
     let getbody = document.body;
     const datas = {
       email: email,
@@ -132,6 +134,20 @@ const Contacts = () => {
       title: title,
       body: body
     };
+
+    // const res = fetch('/api/send', {
+    //   body: JSON.stringify({
+    //     email: datas.email,
+    //     message: datas.body
+    //   }),
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   },
+    //   method: 'POST'
+    // })
+ 
+    // const result = await res;
+
     axios({
       method: "post",
       url: "https://uemura5683.microcms.io/api/v1/contact",
@@ -158,7 +174,7 @@ const Contacts = () => {
     });
   }
 
-  if (typeof document !== 'undefined') {
+  useEffect(() => {
     let rootElement = document.getElementById("modalArea");
     ReactDOM.render(
       <React.StrictMode>
@@ -169,7 +185,7 @@ const Contacts = () => {
       </React.StrictMode>,
       rootElement
     );
-  }
+  });
 
   return (
     <>
@@ -230,6 +246,11 @@ const Contacts = () => {
             <button className={styles.btn_black} type="submit" onClick={handleSubmit}>送信内容を確認する</button>
             </div>
         </form>
+        </div>
+        <div className="flex">
+          <p className={styles.description}>
+            <Link href="/">TOP</Link>
+          </p>
         </div>
         <div id="modalArea" className={styles.modalarea}></div>
     </div>    

@@ -1,0 +1,25 @@
+/**
+* container
+**/
+.container {
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.visible {
+  display: block;
+}
+.invisible {
+  display: none;
+}
+.container .leadhook {
+  padding: 10px;
+  font-size: 1.4rem;
+}
+.container .btnhook {
+  width: 100px;
+  height: 40px;
+}

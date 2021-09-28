@@ -7,3 +7,30 @@ https://ru-blog.com/nextjs-microcms-sitemap/
 * useRefをTypeScriptで使うと Object is possibly 'null'. と怒られる件の対策
 **/
 https://qiita.com/akifumiyoshimu/items/539e4af7ed4d068c0144
+
+/**
+* アクセスコントロール
+**/
+https://zenn.dev/aiji42/articles/450ce962cc225a
+
+/**
+* useEffect + reacthook
+**/
+https://zenn.dev/web_tips/articles/0de2d1dd2bcde7
+
+/**
+* next.js ランディングページ
+**/
+https://blog.microcms.io/custom-field-lp/
+
+/**
+* next.js
+**/
+https://sendgrid.kke.co.jp/blog/?p=14220
+https://sendgrid.kke.co.jp/docs/Tutorials/A_Transaction_Mail/manage_api_key.html
+
+/**
+* sendgrid
+**/
+https://sendgrid.kke.co.jp/blog/?p=14220
+https://sendgrid.kke.co.jp/docs/Tutorials/A_Transaction_Mail/manage_api_key.html

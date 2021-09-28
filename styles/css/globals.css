@@ -26,12 +26,17 @@ a {
   line-height: 1.6;
 }
 
+h1 {
+  text-align: center;
+}
+
 /**
 * utility
 **/
 .flex {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .flex > * {
   margin: 1rem;
