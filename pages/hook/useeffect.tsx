@@ -21,7 +21,6 @@ const Counter = () => {
 
   useEffect(() =>  {
     console.log('aaaa');
-    alert( `カウント数は。。。${counter}` );
     return() => {
       //再レンダリングのタイミングで実行する
       console.log('bbbb');
