@@ -24,7 +24,7 @@ const Counter = () => {
         <div className={styles.container}>
           <p className={styles.leadhook}>
             useState()は関数コンポーネントでstateを管理するための機能であり。<br />
-            初回のレンダー時に返される'state'はuseStateに第一引数に指定した値になります。
+            初回のレンダー時に返される「state」はuseStateに第一引数に指定した値になります。
           </p>
           <button className={styles.btnhook} onClick={updateVisibility}>
               {isVisible ? '非表示にする' : '表示する'}
