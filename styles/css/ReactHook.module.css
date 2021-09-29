@@ -1,4 +1,13 @@
 /**
+* common
+**/
+.visible {
+  display: block;
+}
+.invisible {
+  display: none;
+}
+/**
 * container
 **/
 .container {
@@ -8,12 +17,6 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
-.visible {
-  display: block;
-}
-.invisible {
-  display: none;
 }
 .container .leadhook {
   padding: 10px;

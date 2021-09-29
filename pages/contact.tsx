@@ -135,19 +135,6 @@ const Contacts = () => {
       body: body
     };
 
-    // const res = fetch('/api/send', {
-    //   body: JSON.stringify({
-    //     email: datas.email,
-    //     message: datas.body
-    //   }),
-    //   headers: {
-    //     'Content-Type': 'application/json'
-    //   },
-    //   method: 'POST'
-    // })
- 
-    // const result = await res;
-
     axios({
       method: "post",
       url: "https://uemura5683.microcms.io/api/v1/contact",

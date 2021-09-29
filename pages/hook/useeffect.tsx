@@ -3,9 +3,6 @@ import Link from 'next/link';
 import styles from '../../styles/css/ReactHook.module.css'
 
 const Counter = () => {
-  // coutner：stateを宣言する。
-  // setCoutner：stateを更新する関数を宣言する。
-  // useStateの引数はcoutnerの初期値を指定する。
   const [counter, setCounter] = useState(0);
 
   const countUp = () => {
