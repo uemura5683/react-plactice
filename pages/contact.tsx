@@ -3,7 +3,8 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import ReactDOM from "react-dom";
 import { useRouter } from "next/router";
-import styles from '../styles/css/Contact.module.css'
+import styles from '../styles/css/Contact.module.css';
+import fetch from 'node-fetch';
 
 const Contacts = () => {
 
@@ -88,20 +89,16 @@ const Contacts = () => {
                 <table>
                     <tbody>
                     <tr>
-                        <th>お名前</th>
-                        <td>{data.name}</td>
+                        <th>お名前</th><td>{data.name}</td>
                     </tr>
                     <tr>
-                        <th>メールアドレス</th>
-                        <td>{data.email}</td>
+                        <th>メールアドレス</th><td>{data.email}</td>
                     </tr>
                     <tr>
-                        <th>お問い合わせの内容</th>
-                        <td>{data.title}</td>
+                        <th>お問い合わせの内容</th><td>{data.title}</td>
                     </tr>
                     <tr className={styles.borderline}>
-                        <th>お問い合わせ詳細</th>
-                        <td>{data.body}</td>
+                        <th>お問い合わせ詳細</th><td>{data.body}</td>
                     </tr>
                     </tbody>
                 </table>
@@ -126,15 +123,9 @@ const Contacts = () => {
 
   const FormSubmit = async e => {
     e.preventDefault();
-
-    let getbody = document.body;
-    const datas = {
-      email: email,
-      name: name,
-      title: title,
-      body: body
-    };
-
+    const getbody = document.body
+        , datas = { email: email, name: name, title: title, body: body };
+ 
     axios({
       method: "post",
       url: "https://uemura5683.microcms.io/api/v1/contact",
@@ -147,10 +138,7 @@ const Contacts = () => {
     .then(() => {
       setIsOpen(false);
       let alert_html = "<div class='" + styles.c_contact__complete + "'><p>この度はお問い合わせメールをお送りいただきありがとうございます。<br>今しばらくお待ちくださいますようよろしくお願い申し上げます。<br>なお、しばらくたっても返信、返答がない場合は、<br>お客様によりご入力いただいたメールアドレスに誤りがある場合がございます。<br>その際は、お手数ですが再度お問い合わせいただけますと幸いです。<br>5秒後にリロードします。</p></div>";
-      getbody
-      .insertAdjacentHTML(
-        'afterbegin', alert_html
-      );
+      getbody.insertAdjacentHTML( 'afterbegin', alert_html );
       let countup = function() {
         location.reload();
       }
@@ -159,6 +147,18 @@ const Contacts = () => {
     .catch(err => {
       console.log(err);
     });
+
+    const res = await fetch('/api/send', {
+      body: JSON.stringify({
+        email: email,
+        message: body
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      method: 'POST'
+    })
+    const result = await res.json()
   }
 
   useEffect(() => {

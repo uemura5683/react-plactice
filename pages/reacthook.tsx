@@ -22,6 +22,12 @@ export default function Home() {
           <p className={styles.description}>
             <Link href="/hook/useeffect">useEffect</Link>
           </p>
+          <p className={styles.description}>
+            <Link href="/hook/useContext">useContext</Link>
+          </p>
+          <p className={styles.description}>
+            <Link href="/hook/useReducer">useReducer</Link>
+          </p>
         </div>
         <div className="flex">
           <p className={styles.description}>

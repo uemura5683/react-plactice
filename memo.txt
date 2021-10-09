@@ -24,13 +24,9 @@ https://zenn.dev/web_tips/articles/0de2d1dd2bcde7
 https://blog.microcms.io/custom-field-lp/
 
 /**
-* next.js
-**/
-https://sendgrid.kke.co.jp/blog/?p=14220
-https://sendgrid.kke.co.jp/docs/Tutorials/A_Transaction_Mail/manage_api_key.html
-
-/**
 * sendgrid
 **/
 https://sendgrid.kke.co.jp/blog/?p=14220
+https://sendgrid.kke.co.jp/blog/?p=1300
 https://sendgrid.kke.co.jp/docs/Tutorials/A_Transaction_Mail/manage_api_key.html
+https://qiita.com/risto24/items/de8f6a57c285a3445d0c
