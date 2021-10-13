@@ -125,14 +125,14 @@ const Contacts = () => {
     e.preventDefault();
     const getbody = document.body
         , datas = { email: email, name: name, title: title, body: body };
- 
+        console.log(process.env.MICRO_CMS);
     axios({
       method: "post",
       url: "https://uemura5683.microcms.io/api/v1/contact",
       data: datas,
       headers: {
         "Content-Type": "application/json",
-        "X-WRITE-API-KEY": 'e4f670a9-c5f8-4b37-b85c-420c00c33675'
+        "X-WRITE-API-KEY": process.env.MICRO_CMS
       }
     })
     .then(() => {
