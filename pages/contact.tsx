@@ -29,8 +29,7 @@ const Contacts = () => {
     const ContactElement: Element = document.getElementById( 'p-contact' );
     const ContactPosition: number = ContactElement.getBoundingClientRect().top;
     const currentPosition: number = window.pageYOffset;
-    const targetPosition: number = ContactPosition + currentPosition;     
-    console.log(ContactElement); 
+    const targetPosition: number = ContactPosition + currentPosition;
 
     // エラーチェック
     if( AlertTxt[0] != undefined ) {
@@ -125,7 +124,6 @@ const Contacts = () => {
     e.preventDefault();
     const getbody = document.body
         , datas = { email: email, name: name, title: title, body: body };
-        console.log(process.env.MICRO_CMS);
     axios({
       method: "post",
       url: "https://uemura5683.microcms.io/api/v1/contact",
