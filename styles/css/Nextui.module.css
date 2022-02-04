@@ -1,0 +1,25 @@
+/**
+* container
+**/
+.container {
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.containerinner {
+  display: grid;
+  gap: 10px;
+  font-size: 1.0rem !important;
+}
+.textarea {
+  margin: 0 0 10px;
+}
+.switch {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}

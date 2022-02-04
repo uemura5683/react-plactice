@@ -130,7 +130,7 @@ const Contacts = () => {
       data: datas,
       headers: {
         "Content-Type": "application/json",
-        "X-MICROCMS-API-KEY": process.env.MICRO_CMS
+        "X-MICROCMS-API-KEY": process.env.NU_POST_API_KEY
       }
     })
     .then(() => {
