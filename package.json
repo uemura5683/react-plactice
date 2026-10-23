@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "overrides": {
-    "postcss": "^8.5.10"
+    "postcss": "^8.5.10",
+    "@grpc/grpc-js": "^1.14.6"
   },
   "resolutions": {
-    "postcss": "^8.5.10"
+    "postcss": "^8.5.10",
+    "@grpc/grpc-js": "^1.14.6"
   },
   "scripts": {
     "dev": "next dev",
@@ -24,7 +26,7 @@
     "axios": "^1.16.0",
     "disable-scroll": "^0.6.0",
     "emotion-reset": "^3.0.1",
-    "firebase": "11.2.0",
+    "firebase": "^11.10.0",
     "next": "^16.4.2",
     "next-themes": "^0.0.15",
     "node-fetch": "^2.6.7",
